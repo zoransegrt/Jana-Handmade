@@ -1,0 +1,322 @@
+:root {
+  --burgundy: #490e22;
+  --blush: #fbecef;
+  --blush-light: #fff7f9;
+  --gold: #be9b7b;
+  --card-shadow: 0 4px 24px 0 rgba(73, 14, 34, 0.09);
+  --radius: 18px;
+  --serif: "Playfair Display", serif;
+  --sans: "Poppins", Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  color: var(--burgundy);
+  background: var(--blush-light);
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Header - Same as before */
+.site-header {
+  background: var(--burgundy);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 0 20px;
+  height: 150px;
+  z-index: 10;
+}
+.logo img {
+  width: 125px;
+  height: 125px;
+  object-fit: contain;
+}
+.brand {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+.brand-image {
+  width: 300px;
+  height: 150px;
+  object-fit: contain;
+}
+.menu-toggle {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 20;
+  background: none;
+  border: none;
+  padding: 0;
+}
+.menu-toggle span {
+  display: block;
+  height: 5px;
+  width: 100%;
+  background: white;
+  margin: 5px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(12px);
+}
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-12px);
+}
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 20px;
+  background: var(--burgundy);
+  min-width: 200px;
+  box-shadow: var(--card-shadow);
+  border-radius: var(--radius);
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 0.3s, transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  z-index: 20;
+}
+.dropdown-menu.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.dropdown-menu a {
+  padding: 18px 24px;
+  color: white;
+  text-decoration: none;
+  background: none;
+  border: 0;
+  text-align: left;
+  transition: background 0.2s, color 0.2s;
+  font-size: 1.13rem;
+  letter-spacing: 0.01em;
+  line-height: 2.2;
+}
+.dropdown-menu a:hover,
+.dropdown-menu a:focus {
+  background: #702646;
+  text-decoration: underline;
+}
+.lang-select {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 8px 18px 10px 0;
+  gap: 8px;
+  background: transparent;
+}
+.flag {
+  width: 22px;
+  height: 14px;
+  border-radius: 2px;
+  border: 1px solid #fff;
+  box-shadow: 0 1px 3px rgba(73, 14, 34, 0.1);
+}
+
+/* Gallery Hero Section */
+.gallery-hero {
+  background: var(--blush);
+  padding: 58px 24px 44px 24px;
+  border-radius: var(--radius);
+  margin: 44px auto 32px auto;
+  max-width: 850px;
+  position: relative;
+  box-shadow: 0 4px 22px 0 rgba(73, 14, 34, 0.06);
+  text-align: center;
+}
+.gallery-hero-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #ffeef3 64%, #f6d8e9 100%);
+  opacity: 0.88;
+  z-index: 0;
+  border-radius: var(--radius);
+}
+.gallery-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 520px;
+  margin: 0 auto;
+}
+.gallery-hero-content h1 {
+  font-family: var(--serif);
+  font-size: 2.35rem;
+  letter-spacing: 0.04em;
+  color: var(--burgundy);
+  font-weight: 800;
+}
+.divider {
+  border: none;
+  border-top: 2.5px solid var(--gold);
+  width: 48px;
+  margin: 0 auto 18px auto;
+  opacity: 0.35;
+}
+.gallery-hero-content p {
+  font-size: 1.1rem;
+  color: #4e193a;
+  line-height: 1.89;
+  font-family: var(--sans);
+  margin-bottom: 0;
+}
+
+/* GALLERY GRID */
+.gallery-section {
+  background: var(--blush-light);
+  padding: 36px 18px 44px 18px;
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 12px 0 rgba(73, 14, 34, 0.06);
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 32px;
+  justify-content: center;
+}
+.gallery-img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  border-radius: var(--radius);
+  box-shadow: 0 5px 14px 0 rgba(73, 14, 34, 0.09);
+  object-fit: cover;
+  background: var(--blush);
+  cursor: pointer;
+  transition: transform 0.17s, box-shadow 0.17s;
+}
+.gallery-img:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 11px 28px 0 rgba(73, 14, 34, 0.15);
+  z-index: 2;
+}
+
+/* Gallery Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(73, 14, 34, 0.81);
+  justify-content: center;
+  align-items: center;
+  transition: background 0.2s;
+}
+.modal.show {
+  display: flex;
+}
+.modal-content {
+  border-radius: var(--radius);
+  max-width: 93vw;
+  max-height: 88vh;
+  box-shadow: 0 6px 32px rgba(0, 0, 0, 0.38);
+  border: 6px solid #fff7f9;
+  background: var(--blush-light);
+  object-fit: contain;
+}
+.modal-close {
+  position: absolute;
+  top: 5%;
+  right: 6%;
+  font-size: 2.5rem;
+  font-family: var(--sans);
+  color: #fff;
+  cursor: pointer;
+  opacity: 0.82;
+  transition: opacity 0.17s;
+  z-index: 100;
+}
+.modal-close:hover {
+  opacity: 1;
+}
+
+/* Footer */
+footer {
+  background: var(--burgundy);
+  color: #fff;
+  text-align: center;
+  padding: 28px 0 20px 0;
+  font-size: 1.03rem;
+  font-family: var(--sans);
+  letter-spacing: 0.01em;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  margin-top: 30px;
+  box-shadow: 0 -3px 14px 0 rgba(73, 14, 34, 0.08);
+}
+.instagram {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-bottom: 7px;
+}
+.footer-social {
+  margin-bottom: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+  .gallery-hero-content {
+    max-width: 400px;
+  }
+  .gallery-grid {
+    gap: 17px;
+  }
+}
+@media (max-width: 650px) {
+  .brand-image {
+    width: 110px;
+    height: 52px;
+  }
+  .logo img {
+    width: 55px;
+    height: 55px;
+  }
+  .site-header {
+    height: 92px;
+    padding: 0 5px;
+  }
+  .menu-toggle {
+    width: 29px;
+    height: 29px;
+  }
+  .gallery-hero {
+    padding: 36px 3vw;
+  }
+}
+@media (max-width: 475px) {
+  .dropdown-menu {
+    right: 3px;
+    min-width: 112px;
+  }
+  .gallery-section {
+    padding: 17px 2vw 21px 2vw;
+  }
+}

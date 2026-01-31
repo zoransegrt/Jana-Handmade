@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Jana Handmade</title>
+    <link rel="icon" type="image/png" href="/img/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Luxury fonts: Playfair Display (serif) and Poppins (sans-serif) -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Playfair+Display:700,800&family=Poppins:400,500,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="logo">
+        <a href="index.html"
+          ><img
+            src="/img/logo.png"
+            alt="Jana Handmade Logo"
+            width="125"
+            height="125"
+          />
+        </a>
+      </div>
+      <div class="brand">
+        <img
+          src="/img/jana.png"
+          alt="Jana Handmade Brand"
+          class="brand-image"
+        />
+      </div>
+      <div class="menu-toggle" id="menuToggle" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="dropdown-menu" id="dropdownMenu">
+        <a href="index.html">Home</a>
+        <a href="/o nama/onama.html">O nama</a>
+        <a href="/shop/shop.html">Shop</a>
+        <a href="/kontakt/kontakt.html">Kontakt i Lokacija</a>
+        <a href="/galerija/galerija.html">Galerija</a>
+        <div class="lang-select">
+          <a href="index.html"
+            ><img src="/img/srb.png" alt="Serbian" class="flag"
+          /></a>
+          <a href="#"><img src="/img/uk.png" alt="English" class="flag" /></a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section class="hero" id="home">
+        <div class="hero-bg-texture"></div>
+        <img
+          src="/img/kyana/kyana_vise.png"
+          alt="Handmade purses"
+          class="hero-img"
+        />
+        <div class="hero-text">
+          <h1>Dobrodošli u Jana Handmade</h1>
+          <p>
+            Prelepe, jedinstvene, ručno rađene torbice napravljene sa ljubavlju.
+          </p>
+          <a href="/shop/shop.html" class="cta">Shop Now</a>
+        </div>
+      </section>
+
+      <!-- Featured Products section goes first -->
+      <section class="products" id="menu">
+        <h2>Istaknuti proizvodi</h2>
+        <div class="product-list">
+          <div class="product">
+            <img src="/img/kyana/ky_red.png" alt="Purse 1" />
+            <h3>Kyana</h3>
+            <p class="price">€40</p>
+          </div>
+          <div class="product">
+            <img src="/img/lyra/ly_red.png" alt="Purse 2" />
+            <h3>Lyra</h3>
+            <p class="price">€35</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Us section after products -->
+      <section class="about" id="about">
+        <div class="about-inner">
+          <div class="about-text">
+            <h2>O nama</h2>
+            <hr class="about-divider" />
+            <p>
+              Jana Handmade se zasniva na tradiciji, stilu i kvalitetu. Svaka
+              torbica je pažljivo izrađena korišćenjem vrhunskih materijala kako
+              bi vam pružila jedinstveni dodatak koji se ističe iz mase.
+            </p>
+          </div>
+          <div class="about-image-container">
+            <img
+              class="about-img"
+              src="/img/torbica.png"
+              alt="Workshop or artisan at work"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact & Gallery -->
+      <section class="contact-gallery" id="contact">
+        <div class="contact">
+          <h2>Kontakt i lokacija</h2>
+          <p>
+            Email:
+            <a href="mailto:info@janahandmade.com">info@janahandmade.com</a>
+          </p>
+          <p>Lokacija: Belgrade, Serbia</p>
+        </div>
+        <!-- MINI GALLERY STARTS HERE -->
+        <div class="gallery" id="gallery">
+          <h2>Galerija</h2>
+          <div class="mini-gallery-grid">
+            <img
+              src="/img/kyana/kyana_pile.png"
+              alt="Purse Gallery 1"
+              class="mini-gallery-img"
+            />
+            <img
+              src="/img/lyra/lyra_vise.png"
+              alt="Purse Gallery 2"
+              class="mini-gallery-img"
+            />
+            <img
+              src="/img/kyana/kyana_vise.png"
+              alt="Purse Gallery 3"
+              class="mini-gallery-img"
+            />
+          </div>
+          <div class="mini-gallery-more">
+            <a href="/galerija/galerija.html" class="mini-gallery-btn"
+              >Pogledaj celu galeriju</a
+            >
+          </div>
+          <!-- Modal for zoom (hidden by default, shown with JS) -->
+          <div id="miniModal" class="mini-modal">
+            <span id="miniModalClose" class="mini-modal-close">&times;</span>
+            <img class="mini-modal-content" id="miniModalImg" alt="Zoomed" />
+          </div>
+        </div>
+        <!-- MINI GALLERY ENDS -->
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/jana_handmadee/" target="_blank"
+          ><img src="/img/instagram.png" alt="Instagram" class="instagram"
+        /></a>
+      </div>
+      <p>&copy; 2025 Jana Handmade. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Korpa | Jana Handmade</title>
+    <link rel="icon" type="image/png" href="/img/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Playfair+Display:700,800&family=Poppins:400,500,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="cart.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="logo">
+        <a href="/index.html">
+          <img
+            src="/img/logo.png"
+            alt="Jana Handmade Logo"
+            width="70"
+            height="70"
+          />
+        </a>
+      </div>
+      <a href="/cart/cart.html" class="cart-btn" title="Go to Cart">
+        <img src="/img/cart.png" alt="Cart" class="cart-icon" />
+        <span class="cart-badge" id="cartBadgeHeader"></span>
+      </a>
+    </header>
+    <main class="cart-main">
+      <h1 class="cart-title">Vaša korpa</h1>
+      <a href="/shop/shop.html" class="back-to-shop-btn">Nazad na shop</a>
+      <div id="cartList" class="cart-list"></div>
+      <div class="cart-bottom-bar">
+        <a href="/placanje/placanje.html" id="checkoutBtn" class="checkout-btn"
+          >Nastavi na plaćanje</a
+        >
+      </div>
+    </main>
+    <footer>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/jana_handmadee/" target="_blank">
+          <img src="/img/instagram.png" alt="Instagram" class="instagram" />
+        </a>
+      </div>
+      <p>&copy; 2025 Jana Handmade. Sva prava zadržana.</p>
+    </footer>
+    <script src="cart.js"></script>
+  </body>
+</html>

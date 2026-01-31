@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Jana Shopping | Jana Handmade</title>
+    <link rel="icon" type="image/png" href="/img/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Playfair+Display:700,800&family=Poppins:400,500,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="shopping_section.css" />
+  </head>
+  <body>
+    <main class="shopping-main">
+      <a href="/shop/shop.html" class="back-btn">&larr; Nazad u shop</a>
+      <section class="product-detail">
+        <div class="bag-image-area">
+          <img id="bagImg" src="" alt="Bag image" class="bag-image" />
+        </div>
+        <div class="product-info-area">
+          <h1 class="bag-title" id="bagTitle"></h1>
+          <p class="bag-description" id="bagDesc"></p>
+          <div class="option-block">
+            <h2>Dužina kaiša</h2>
+            <div class="belt-options">
+              <button class="belt-btn selected" data-belt="short">
+                Kratak
+              </button>
+              <button class="belt-btn" data-belt="medium">Srednji</button>
+              <button class="belt-btn" data-belt="long">Dugačak</button>
+            </div>
+          </div>
+          <div class="option-block">
+            <h2>Boja</h2>
+            <div class="color-options">
+              <button
+                class="color-btn selected"
+                data-color="beige"
+                title="beige"
+              >
+                <span class="color-circle beige"></span>
+              </button>
+              <button class="color-btn" data-color="burgundy" title="Burgundy">
+                <span class="color-circle burgundy"></span>
+              </button>
+              <button class="color-btn" data-color="black" title="Crna">
+                <span class="color-circle black"></span>
+              </button>
+              <button class="color-btn" data-color="tiger" title="Tiger">
+                <span class="color-circle tiger"></span>
+              </button>
+            </div>
+          </div>
+          <div class="price-row">
+            <span class="price-label">Cena:</span>
+            <span class="price-value" id="bagPrice"></span>
+          </div>
+          <button class="order-btn">Dodaj u korpu</button>
+        </div>
+      </section>
+    </main>
+    <script src="shopping_section.js"></script>
+  </body>
+</html>
